@@ -13,7 +13,7 @@ RUN echo "deb http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/d
     && apt-get update && apt-get install --no-install-recommends --no-install-suggests -y php7.0-cli \
     php7.0-fpm php7.0-mysql php7.0-intl php7.0-xdebug php7.0-recode php7.0-mcrypt php7.0-memcache \
     php7.0-memcached php7.0-imagick php7.0-curl php7.0-xsl php7.0-dev php7.0-tidy php7.0-xmlrpc \
-    php7.0-gd php7.0-pspell php7.0-mbstring nginx
+    php7.0-gd php7.0-pspell php7.0-mbstring php7.0-zip nginx
 
 RUN sed -i "s/www-data;/www-data;\\ndaemon off;/g" /etc/nginx/nginx.conf \
     && sed -i "s/short_open_tag = On/short_open_tag = Off/" /etc/php/7.0/cli/php.ini \
